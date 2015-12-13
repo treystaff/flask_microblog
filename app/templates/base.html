@@ -1,0 +1,15 @@
+<!--Base template containing content/logic shared by all other pages-->
+<html lang="en-US">
+    <head>
+        {% if title %}
+            <title>{{ title }} - microblog</title>
+        {% else %}
+            <title>Welcome to microblog</title>
+        {% endif %}
+    </head>
+    <body>
+        <div> Microblog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
