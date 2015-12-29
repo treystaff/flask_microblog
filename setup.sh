@@ -21,10 +21,4 @@ source flask/bin/activate
 # Install dependencies required for this tutorial. 
 pip install flask flask-login flask-openid flask-mail flask-sqlalchemy 
 pip install sqlalchemy-migrate flask-wooshalchemy flask-wtf flask-babel
-pip install guess_language flipflop coverage
-
-# Now create the project directory structure. (remove if create a git)
-cd ..
-mkdir -p app/{static,templates}
-mkdir tmp
-
+pip install guess_language flipflop coverage passlib

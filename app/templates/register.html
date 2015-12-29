@@ -1,0 +1,35 @@
+<!--Register template-->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>New User Registration</h1>
+<form action="" method="post" name="register">
+    {{ form.hidden_tag() }}
+    <p>
+        Select a username<br>
+        {{ form.username(size=80) }}<br>
+        {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+
+        Enter an email<br>
+        {{ form.email(size=80) }}<br>
+        {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+        Enter a password<br>
+        {{ form.password }}<br>
+        {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+
+        Confirm Password:<br>
+        {{ form.confirm }}<br>
+        {% for error in form.confirm.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}<br>
+
+    </p>
+    <p><input type="submit" value="Register"></p>
+</form>
+{% endblock %}
